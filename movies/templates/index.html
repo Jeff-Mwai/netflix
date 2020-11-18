@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h3 class="text-center text-white">Popular Movies</h3>
+{%for popular in popular.results%}
+<img class="mt-1" src="https://image.tmdb.org/t/p/w500/{{popular.poster_path}}" width="150px" alt="">
+
+{%endfor%}
+
+<h3 class="text-center text-white">Upcoming Movies</h3>
+{%for upcoming in upcoming.results%}
+<img class="mt-1" src="https://image.tmdb.org/t/p/w500/{{upcoming.poster_path}}" width="150px" alt="">
+
+{%endfor%}
+
+<h3 class="text-center text-white">Top Rated Movies</h3>
+{%for top_rated in top_rated.results%}
+<img class="mt-1" src="https://image.tmdb.org/t/p/w500/{{top_rated.poster_path}}" width="150px" alt="">
+
+{%endfor%}
+
+
+{% endblock %}
